@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: #323238;
+  --bg-color: #ffffff;
+  --bg-card-primary: #e1e1e6;
+  --bg-card-active: #e3c7de;
+  --svg-fill-primary: #323238;
+}
+
+.dark-theme:root {
+  --text-color: #ffffff;
+  --bg-color: #121214;
+  --bg-card-primary: #434347;
+  --bg-card-active: #0a3442;
+  --svg-fill-primary: #fafafa;
+}
+
+svg .soundCards button.active {
+  background-color: var(--bg-card-active);
+}
+
+svg {
+  fill: var(--svg-fill-primary);
+}
+
+button svg path {
+  fill: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12.6rem;
+
+  display: grid;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+nav {
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+}
+
+main {
+  width: 82.1rem;
+  height: 33.6rem;
+  background-color: var (var(--bg--color));
+
+  display: flex;
+
+  align-self: center;
+  justify-self: center;
+}
+
+main .timerAndControls {
+  margin-right: 19.2rem;
+}
+
+.timerAndControls .timer {
+  width: 32.1rem;
+  height: 14.8rem;
+  margin-top: 5.8rem;
+}
+
+.timerAndControls .controls {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.7rem;
+}
+
+.color {
+  fill: var(--svg-fill-active);
+}
+
+.hide {
+  display: none;
+}
+
+.soundCards {
+  display: grid;
+  gap: 3.2rem;
+
+  grid-template-areas:
+    "forest rain"
+    "coffee fp";
+}
+
+.soundCards button {
+  background-color: var(--bg-card-primary);
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  padding-top: 2rem;
+  transition: all 0.3s;
+}
+
+.soundCards button.active {
+  background-color: var(--bg-card-active);
+}
+
+.volSlider {
+  appearance: none;
+  height: 0.4rem;
+  width: 9rem;
+  margin: 3.8rem auto 3rem;
+  border-radius: 0.5rem;
+}
+
+.volSlider::-webkit-slider-thumb {
+  background: var(--text-color);
+  appearance: none;
+  border: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 5rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+
+.volSlider::-webkit-slider-runnable-track {
+  background: var(--text-color);
+  height: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.soundCards button:hover {
+  scale: 1.1;
+}
+
+.soundCards path:hover {
+  transition: 0.6s;
+}
+
+.soundCards .rain path:hover {
+  fill: rgb(21, 21, 198);
+}
+
+.soundCards .forest path:hover {
+  fill: rgb(29, 172, 13);
+}
+
+.soundCards .coffee path:hover {
+  fill: rgb(241, 36, 169);
+}
+
+.soundCards .fp path:hover {
+  fill: rgb(255, 149, 0);
+}
